@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Entreno</title>
+<meta name="theme-color" content="#c2410c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Entreno">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header class="barra">
+  <button class="icono" id="semAnterior" aria-label="Semana anterior">‹</button>
+  <button class="fecha" id="semTexto">Semana 1</button>
+  <button class="icono" id="semSiguiente" aria-label="Semana siguiente">›</button>
+</header>
+<div class="dias" id="dias"></div>
+
+<main>
+  <section id="vistaHoy" class="vista activa"></section>
+  <section id="vistaEjercicios" class="vista"></section>
+  <section id="vistaProgreso" class="vista"></section>
+  <section id="vistaPlan" class="vista"></section>
+</main>
+
+<div class="temporizador" id="temporizador" hidden>
+  <span>Descanso</span><strong id="tempoTexto">0:00</strong>
+  <button class="chip" id="tempoMas">+15"</button>
+  <button class="chip activa" id="tempoParar">Listo</button>
+</div>
+
+<nav class="pestanas">
+  <button data-vista="vistaHoy" class="activa">Sesión</button>
+  <button data-vista="vistaEjercicios">Ejercicios</button>
+  <button data-vista="vistaProgreso">Progreso</button>
+  <button data-vista="vistaPlan">Plan</button>
+</nav>
+
+<div class="hoja" id="hojaEjercicio" hidden>
+  <div class="hoja-cabeza"><button class="icono" data-cerrar>‹</button><strong>Ejercicio</strong><span></span></div>
+  <div id="ejDetalle"></div>
+</div>
+
+<div class="aviso" id="aviso" hidden></div>
+<script src="plan.js"></script>
+<script src="ejercicios.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
